@@ -220,4 +220,21 @@ footer {
     margin-left: -460px;
     line-height: 10px;
   }
+
+  .header-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 32px;
+    gap: 70px;
+    font-weight: 400;
+    padding-left: 0px;
+    align-items: center;
+  }
+
+  .closeNavbar {
+    display: flex;
+    margin-right: -210px;
+    justify-content: space-around;
+  }
 }
