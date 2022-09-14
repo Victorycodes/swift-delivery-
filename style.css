@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: white;
   margin: 0px;
 }
 
@@ -7,28 +7,30 @@ body {
   display: flex;
   gap: 40px;
   list-style-type: none;
-  color: #717680;
+  color: #2A4B9B;
 }
 
 .headerLogo {
   display: flex;
   justify-content: space-between;
   padding: 15px 60px;
-  background-color: #17181a;
+  /* background-color: #17181a; */
   border-bottom: 1px solid #202124;
 }
 
 .navbarBtn {
   display: none;
-  background-color: #17181a;
+  /* background-color: #17181a; */
   justify-content: space-between;
   padding: 15px 60px;
   border-bottom: 1px solid #202124;
 }
 
 .logo {
-  height: 42px;
-  width: 130px;
+  height: 60px;
+  width: 150px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar {
@@ -38,14 +40,14 @@ body {
 }
 
 h1 {
-  color: white;
+  color: #2A4B9B;
   text-align: center;
   font-size: 70px;
   margin-bottom: 10px;
 }
 
 .wrapper-paragraph {
-  color: white;
+  color: #2A4B9B;
   text-align: center;
   margin-top: 0px;
   font-size: 28px;
@@ -61,12 +63,12 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  color: white;
+  color: #2A4B9B;
 }
 
 .wrapper-form-input {
-  background-color: #17181a;
-  color: white;
+  /* background-color: #17181a; */
+  color: #2A4B9B;
   padding: 10px 20px;
   border: 2px solid #17181a;
   border-radius: 6px;
@@ -84,9 +86,9 @@ button:hover {
 }
 
 .wrapper-form-btn {
-  background-color: #294382;
+  /* background-color: #294382; */
   width: 470px;
-  color: #0e0e0f;
+  color: #2A4B9B;
   height: 52px;
   border-radius: 6px;
   margin-top: 20px;
@@ -102,7 +104,7 @@ button:hover {
 
 footer {
   margin-top: 100px;
-  background-color: #17181a;
+  /* background-color: #17181a; */
   padding: 15px 60px;
 }
 
@@ -120,7 +122,7 @@ footer {
 .footer-bottom {
   display: flex;
   border-top: 1px solid #202124;
-  color: #717680;
+  color: #2A4B9B;
   font-size: 12px;
   padding-top: 15px;
   justify-content: space-between;
@@ -129,23 +131,24 @@ footer {
 @media screen and (max-width: 768px) {
   .navbarBtn {
     display: flex;
-    background-color: #17181a;
+    /* background-color: #17181a; */
     justify-content: space-between;
     padding: 17px 25px;
     border-bottom: 1px solid #202124;
+    gap: 155px;
   }
 
   .headerLogo {
     display: none;
     justify-content: space-between;
     padding: 15px 60px;
-    background-color: #17181a;
+    /* background-color: #17181a; */
     border-bottom: 1px solid #202124;
   }
 
   .wrapper-form-input {
-    background-color: #17181a;
-    color: white;
+    /* background-color: #17181a; */
+    color: #2A4B9B;
     padding: 10px 20px;
     border: 2px solid #17181a;
     border-radius: 6px;
@@ -155,9 +158,9 @@ footer {
   }
 
   .wrapper-form-btn {
-    background-color: #294382;
+    /* background-color: #294382; */
     width: 325px;
-    color: #0e0e0f;
+    color: #2A4B9B;
     height: 52px;
     border-radius: 6px;
     margin-top: 20px;
@@ -167,14 +170,14 @@ footer {
   }
 
   h1 {
-    color: white;
+    color: #2A4B9B;
     text-align: center;
     font-size: 45px;
     margin-bottom: 10px;
   }
 
   .wrapper-paragraph {
-    color: white;
+    color: #2A4B9B;
     text-align: center;
     font-size: 22px;
     width: 85%;
@@ -183,7 +186,7 @@ footer {
 
   footer {
     margin-top: 100px;
-    background-color: #17181a;
+    /* background-color: #17181a; */
     padding: 17px 25px;
   }
 
@@ -193,25 +196,28 @@ footer {
     gap: 20px;
     list-style-type: none;
     padding: 0px;
-    border-bottom: 1px solid #202124;
+    /* border-bottom: 1px solid #202124; */
     padding-bottom: 20px;
   }
 
   .footer-bottom {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #202124;
-    color: #717680;
+    /* border-top: 1px solid #202124; */
+    color: #2A4B9B;
     font-size: 14px;
     padding-top: 20px;
     justify-content: space-between;
   }
 
-  
-.header-list {
+  .header-navbar {
     display: none;
-    gap: 40px;
-    list-style-type: none;
-    color: #717680;
+    position: fixed;
+    background-color: #ffffff;
+    min-width: 480px;
+    padding: 12px;
+    z-index: 1;
+    margin-left: -460px;
+    line-height: 10px;
   }
 }
