@@ -14,16 +14,19 @@ form.addEventListener('submit', function(e) {
     
     let numberValidation = false
     let numberIsValidated = inputNumber
-    let expression = /^[\+]?[(]?[0-9]{3}[)]?[-s\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    let expression = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 
     e.preventDefault();
 
     if (!numberIsValidated) {
         setMessage(`Please fill the space appropraitely`, alertMsg, inputNumber)
+        return false
     } else if (!expression) {
         setMessage(`Please fill the space appropraitely`, alertMsg, inputNumber)
+        return false
     } else {
-        numberValidation = true;
+        // numberValidation = true;
+        return true;
     }
 })
 
@@ -48,10 +51,12 @@ openNavbar.addEventListener('click', headerDropdown);
 
 function headerDropdown(e) {
     headerList.style.display = "flex";
+    headerList.style.transform = 'translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
+    headerList.style.transformStyle = 'preserve-3d';
     headerList.style.height = '100vh'
     headerList.style.backgroundColor = '#252b46';
     headerList.style.flexDirection = 'column';
-    headerList.style.padding = '50px 40px';
+    headerList.style.padding = '70px 40px';
     headerList.style.margin = '0px';
     openNavbar.style.margin = '0px';
     logo.style.margin = '0px';
@@ -69,6 +74,8 @@ function closeDropdown(e) {
     headerList.style.display = 'none';
     openNavbar.style.display = 'flex';
     logo.style.display = 'flex';
-    openNavbar.style.margin = '-20px 44px 0px 0px';
-    logo.style.margin = '42px 0px 0px 44px';
+    openNavbar.style.margin = '10px 25px 0px 0px';
+    // logo.style.margin = '57px 0px 20px 20px';
+    logo.style.marginLeft = '20px'
+    mobileHeader.style.padding = '17px 25px'
 }
