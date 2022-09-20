@@ -14,7 +14,6 @@ form.addEventListener('submit', function(e) {
     
 
     let numberIsValidated = inputNumber.value
-    // let phoneRegEx = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
     let phoneRegEx = /^[0-9]{11}$/; 
 
     e.preventDefault();
@@ -64,7 +63,6 @@ function headerDropdown(e) {
     mobileHeader.style.padding = '0px'
 }
 
-
 // To Close Nav Bar
 closeBtn.addEventListener('click', closeDropdown);
 
@@ -73,7 +71,6 @@ function closeDropdown(e) {
     openNavbar.style.display = 'flex';
     logo.style.display = 'flex';
     openNavbar.style.margin = '10px 25px 0px 0px';
-    // logo.style.margin = '57px 0px 20px 20px';
     logo.style.marginLeft = '20px'
     mobileHeader.style.padding = '17px 25px'
 }
