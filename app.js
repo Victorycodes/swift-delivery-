@@ -1,6 +1,6 @@
 const form = document.querySelector('.wrapper-form');
 const alertMsg = document.querySelector('.alertmsg');
-const inputNumber = document.querySelector('.number');
+const inputNumber = document.getElementById('phoneNumberInput');
 const openNavbar = document.querySelector('.navbar');
 const headerList = document.querySelector('.header-navbar')
 const list = document.querySelector('.header-list')
@@ -12,31 +12,25 @@ const closeBtn = document.querySelector('.closeNavbar')
 
 form.addEventListener('submit', function(e) {
     
-    let numberValidation = false
-    let numberIsValidated = inputNumber
-    let expression = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+
+    let numberIsValidated = inputNumber.value
+    // let phoneRegEx = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    let phoneRegEx = /^[0-9]{11}$/; 
 
     e.preventDefault();
 
     if (!numberIsValidated) {
-        setMessage(`Please fill the space appropraitely`, alertMsg, inputNumber)
-        return false
-    } else if (!expression) {
-        setMessage(`Please fill the space appropraitely`, alertMsg, inputNumber)
-        return false
-    } else {
-        // numberValidation = true;
-        return true;
+        setMessage(`Phone number can not be empty`)
+    } else if (!phoneRegEx.test(inputNumber.value)) {
+        setMessage(`Invalid phone number`)
     }
 })
 
 // Set message
-function setMessage(errMsg, alertMsg) {
-    alertMsg.style.color = 'white';
+function setMessage(errMsg) {
+    alertMsg.style.color = 'red';
+    alertMsg.style.fontStyle = 'italic'
     alertMsg.textContent = errMsg;
-    alertMsg.style.backgroundColor = 'red';
-    alertMsg.style.borderBottomLeftRadius = '4px';
-    alertMsg.style.borderBottomRightRadius = '4px';
     alertMsg.style.padding = '7px 3px 7px 15px';
     alertMsg.style.display = 'flex';
     setTimeout(() => {
@@ -53,8 +47,12 @@ function headerDropdown(e) {
     headerList.style.display = "flex";
     headerList.style.transform = 'translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
     headerList.style.transformStyle = 'preserve-3d';
+    headerList.style.animation = '10s cubic-bezier(1, 1.02, 0, -0.96) 10s 10 normal none running spin';
+    headerList.style.transitionDelay = '1000ms'
+    headerList.style.transitionDuration = '1000ms'
+    headerList.style.transitionTimingFunction = 'ease-in'
     headerList.style.height = '100vh'
-    headerList.style.backgroundColor = '#252b46';
+    headerList.style.backgroundColor = '#17181A';
     headerList.style.flexDirection = 'column';
     headerList.style.padding = '70px 40px';
     headerList.style.margin = '0px';
